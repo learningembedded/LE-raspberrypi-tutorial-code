@@ -13,14 +13,14 @@
 
 # http://learningembedded.com/
 
-import RPi.GPIO as GPIO				    # imports Raspberry Pi's GPIO module
-ledPin = 18             			    #defines a variable with 18 value  
-GPIO.setmode(GPIO.BCM) 			    	# sets GPIO pins naming same as BCM SoC
-GPIO.setup(led_pin, GPIO.OUT) 		# sets 18 pin as output
-pwmLed = GPIO.PWM(ledPin, 500) 		# create PWM with ledPin as channel & frequency 500
-pwmLed.start(100) 				      	# to start PWM with duty cycle 100
+import RPi.GPIO as GPIO						# imports Raspberry Pi's GPIO module
+ledPin = 18             			    		#defines a variable with 18 value  
+GPIO.setmode(GPIO.BCM) 			    			# sets GPIO pins naming same as BCM SoC
+GPIO.setup(led_pin, GPIO.OUT) 					# sets 18 pin as output
+pwmLed = GPIO.PWM(ledPin, 500) 					# create PWM with ledPin as channel & frequency 500
+pwmLed.start(100) 				      		# to start PWM with duty cycle 100
 while True:
 	duty_s = raw_input("Enter Brightness (0 to 100):") 	# for inputting data
-	duty = int(duty_s) 									                # typecasting to int
-	pwmLed.ChangeDutyCycle(duty) 					            	# to change duty cycle
+	duty = int(duty_s) 					# typecasting to int
+	pwmLed.ChangeDutyCycle(duty) 				# to change duty cycle
 	
