@@ -16,9 +16,9 @@
 import RPi.GPIO as GPIO                 # imports Raspberry Pi's GPIO module
 import time                             # imports time module
 GPIO.setmode(GPIO.BCM)                  # sets GPIO pins naming same as BCM Soc
-GPIO.setup(18, GPIO.OUT) 		        		# sets 18 pin as output
+GPIO.setup(18, GPIO.OUT) 		# sets 18 pin as output
 while (True): 
-	GPIO.output(18, True) 		        		# true sets led pin high
-	time.sleep(0.5) 					            #delay of 0.5 sec
-	GPIO.output(18, False)   	        		#false sets led pin low
-	time.sleep(0.5) 					            #delay of 0.5 sec
+	GPIO.output(18, True) 		# true sets led pin high
+	time.sleep(0.5) 		# delay of 0.5 sec
+	GPIO.output(18, False)   	# false sets led pin low
+	time.sleep(0.5) 		# delay of 0.5 sec
